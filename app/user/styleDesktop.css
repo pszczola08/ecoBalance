@@ -1,0 +1,39 @@
+@media screen and (min-width: 1400px) {
+    main {
+        display: flex;
+    }
+    
+    aside {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    
+    article {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.info {
+        text-align: center;
+    }
+
+    form {
+        padding: 20px 40px;
+        border-radius: 10px;
+        border-width: 2px;
+    }
+
+    input {
+        padding: 7px 14px;
+        border-radius: 7px;
+        border: 1.5px solid #5f5aa2;
+        background-color: #565192;
+    }
+    input:not([type="submit"]) {
+        margin-bottom: 7px;
+    }
+}

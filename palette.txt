@@ -1,0 +1,11 @@
+Main: #4e7a72
+Nav 1: #a15a50
+Nav 2: #b5655a
+Dec 1: #565192
+Dec 2: #5f5aa2
+
+LMD BG: #FFFFFF
+LMD TX: #151515
+
+DMD BG: #090809
+DMD TX: #F4FFF8

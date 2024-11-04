@@ -1,0 +1,18 @@
+body {
+    background-color: #090809;
+    color: #F4FFF8;
+}
+
+::selection {
+    background-color: #F4FFF8;
+    color: #090809;
+}
+
+form {
+    border-style: dashed;
+    border-color: #F4FFF8;
+}
+
+::placeholder {
+    color: #F4FFF880;
+}

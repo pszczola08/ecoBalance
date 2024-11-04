@@ -1,0 +1,53 @@
+@media screen and (max-width: 1399px) {
+    aside {
+        height: 20vh;
+    }
+    
+    article {
+        height: 80vh;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    h1, h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    h1 {
+        font-size: 64px;
+    }
+    p {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 48px;
+    }
+
+    aside, article {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+
+    div.info {
+        text-align: center;
+    }
+
+    form {
+        border-width: 6px;
+        border-radius: 30px;
+        padding: 60px 120px;
+    }
+    input {
+        padding: 21px 42px;
+        border-radius: 21px;
+        border: 4.5px solid #5f5aa2;
+        background-color: #565192;
+        font-size: 32px;
+    }
+    input:not([type="submit"]) {
+        margin-bottom: 21px;
+    }
+}

@@ -1,28 +1,24 @@
 @media screen and (max-width: 1399px) {
     aside {
-        height: 20vh;
+        height: 20dvh;
     }
-    
     article {
-        height: 80vh;
-    }
-
-    body {
-        margin: 0;
+        height: 80dvh;
     }
 
     h1, h2 {
         margin-top: 0;
         margin-bottom: 0;
     }
+
     h1 {
         font-size: 64px;
     }
-    p {
-        font-size: 32px;
-    }
     h2 {
         font-size: 48px;
+    }
+    p {
+        font-size: 32px;
     }
 
     aside, article {
@@ -40,6 +36,7 @@
         border-radius: 30px;
         padding: 60px 120px;
     }
+    
     input {
         padding: 21px 42px;
         border-radius: 21px;

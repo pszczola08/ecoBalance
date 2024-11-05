@@ -21,7 +21,7 @@
         <article>
             <div class="info">
                 <h2 id="h2"></h2>
-                <form>
+                <form method="post" action="register.php">
                     <input type="text" name="username" placeholder="" id="usernameInput" required minlength="8" maxlength="40"><br>
                     <input type="password" name="password" placeholder="" id="passwordInput" required><br>
                     <input type="password" name="secondPassword" placeholder="" id="secondPasswordInput" required><br>
@@ -32,5 +32,13 @@
     </main>
     <script src="./languages/register.js"></script>
     <script src="./theme.js"></script>
+    <?php
+        @$username = $_POST['username'];
+        @$password = $_POST['password'];
+        @$secondPassword = $_POST['secondPassword'];
+        if(!empty ($username) && !empty($password) && !empty($secondPassword)) {
+            
+        }
+    ?>
 </body>
 </html>

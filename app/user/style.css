@@ -3,7 +3,7 @@ body {
 }
 
 main {
-    height: 100vh;
+    height: 100dvh;
 }
 
 aside {
@@ -13,4 +13,12 @@ aside {
 
 a {
     text-decoration: none;
+}
+
+input {
+    transition: background-color .3s;
+}
+input:focus {
+    border-color: #565192;
+    background-color: #5f5aa2;
 }

@@ -7,7 +7,9 @@ const pl = {
     usernameInputPlaceholder: "Nazwa użytkownika",
     passwordInputPlaceholder: "Hasło",
     secondPasswordInputPlaceholder: "Powtórz hasło",
-    submitButton: "Utwórz Konto"
+    submitButton: "Utwórz Konto",
+    dbConnectionError: "Połączenie zostało przerwane",
+    passwordsAreNotTheSameError: "Hasła nie są takie same!"
 }
 const en = {
     lang: "en",
@@ -18,7 +20,9 @@ const en = {
     usernameInputPlaceholder: "Username",
     passwordInputPlaceholder: "Password",
     secondPasswordInputPlaceholder: "Repeat password",
-    submitButton: "Create account"
+    submitButton: "Create account",
+    dbConnectionError: "Connection failed",
+    passwordsAreNotTheSameError: "Passwords are not the same!"
 }
 
 const userLanguage = navigator.language || navigator.userLanguage;
@@ -30,6 +34,7 @@ if(userLanguage == "pl") {
 }
 
 function switchLang(language) {
+    
     if(language == "pl") {
         var lang = pl;
     } else {
@@ -45,4 +50,6 @@ function switchLang(language) {
     document.getElementById('passwordInput').setAttribute("placeholder", lang.passwordInputPlaceholder);
     document.getElementById('secondPasswordInput').setAttribute("placeholder", lang.secondPasswordInputPlaceholder);
     document.getElementById('submitButton').setAttribute("value", lang.submitButton);
+    document.getElementById('dbConnectionError').innerText = lang.dbConnectionError;
+    document.getElementById('passwordsAreNotTheSameError').innerText = lang.passwordsAreNotTheSameError;
 }

@@ -6,7 +6,8 @@ const pl = {
     h2: "Zaloguj się do EcoBalance",
     usernameInputPlaceholder: "Nazwa użytkownika",
     passwordInputPlaceholder: "Hasło",
-    submitButton: "Zaloguj się"
+    submitButton: "Zaloguj się",
+    dbConnectionError: "Połączenie zostało przerwane"
 }
 const en = {
     lang: "en",
@@ -16,7 +17,8 @@ const en = {
     h2: "Log in to EcoBalance",
     usernameInputPlaceholder: "Username",
     passwordInputPlaceholder: "Password",
-    submitButton: "Log in"
+    submitButton: "Log in",
+    dbConnectionError: "Connection failed"
 }
 
 const userLanguage = navigator.language || navigator.userLanguage;
@@ -42,4 +44,5 @@ function switchLang(language) {
     document.getElementById('usernameInput').setAttribute("placeholder", lang.usernameInputPlaceholder);
     document.getElementById('passwordInput').setAttribute("placeholder", lang.passwordInputPlaceholder);
     document.getElementById('submitButton').setAttribute("value", lang.submitButton);
+    document.getElementById('dbConnectionError').innerText = lang.dbConnectionError;
 }

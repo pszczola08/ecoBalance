@@ -47,4 +47,9 @@
     input:not([type="submit"]) {
         margin-bottom: 21px;
     }
+
+    #dbConnectionError {
+        margin-top: 20px;
+        font-size: 32px;
+    }
 }

@@ -27,18 +27,33 @@
                     <input type="password" name="secondPassword" placeholder="" id="secondPasswordInput" required><br>
                     <input type="submit" value="" id="submitButton">
                 </form>
+                <?php
+                    @$username = $_POST['username'];
+                    @$password = $_POST['password'];
+                    @$secondPassword = $_POST['secondPassword'];
+                    if(!empty ($username) && !empty($password) && !empty($secondPassword)) {
+                        $errors = false;
+                        try {
+                            require "../lib/globalVariables.php";
+                        } catch(Exception $e) {
+                            $errors = true;
+                            echo("<div id='dbConnectionError'></div>");
+                        }
+
+                        if($errors == false) {
+                            if($password == $secondPassword) {
+
+                            } else {
+                                echo("<div id='passwordsAreNotTheSameError'></div>");
+                            }
+                        }
+                    }
+                ?>
             </div>
         </article>
     </main>
     <script src="./languages/register.js"></script>
     <script src="./theme.js"></script>
-    <?php
-        @$username = $_POST['username'];
-        @$password = $_POST['password'];
-        @$secondPassword = $_POST['secondPassword'];
-        if(!empty ($username) && !empty($password) && !empty($secondPassword)) {
-            
-        }
-    ?>
+    
 </body>
 </html>

@@ -22,3 +22,9 @@ input:focus {
     border-color: #565192;
     background-color: #5f5aa2;
 }
+
+#dbConnectionError {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}

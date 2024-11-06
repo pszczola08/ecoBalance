@@ -22,10 +22,10 @@
             <div class="info">
                 <h2 id="h2"></h2>
                 <form method="post" action="register.php">
-                    <input type="text" name="username" placeholder="" id="usernameInput" required minlength="8" maxlength="40"><br>
-                    <input type="password" name="password" placeholder="" id="passwordInput" required><br>
-                    <input type="password" name="secondPassword" placeholder="" id="secondPasswordInput" required><br>
-                    <input type="submit" value="" id="submitButton">
+                    <input type="text" name="username" id="usernameInput" required minlength="8" maxlength="40" pattern="[a-zA-Z0-9]+"><br>
+                    <input type="password" name="password" id="passwordInputPlaceholder" required><br>
+                    <input type="password" name="secondPassword" id="secondPasswordInputPlaceholder" required><br>
+                    <input type="submit" id="submitButton">
                 </form>
                 <?php
                     @$username = $_POST['username'];
@@ -35,16 +35,42 @@
                         $errors = false;
                         try {
                             require "../lib/globalVariables.php";
+                            require "../lib/divGen.php";
                         } catch(Exception $e) {
                             $errors = true;
-                            echo("<div id='dbConnectionError'></div>");
+                            generateDiv('dbConnectionError');
                         }
 
                         if($errors == false) {
                             if($password == $secondPassword) {
-
+                                $checkForUsername = DB -> query(
+                                    "SELECT COUNT(*) FROM users WHERE username = '$username'"
+                                );
+                                if(!$checkForUsername) {
+                                    generateDiv('dbConnectionError');
+                                    DB -> close();
+                                } else {
+                                    $info = $checkForUsername -> fetch_row();
+                                    if($info[0] == 0) {
+                                        $hashpass = SHA1($password);
+                                        $insert = DB -> query(
+                                            "INSERT INTO users(username, password) VALUES ('$username', '$hashpass')"
+                                        );
+                                        if($insert) {
+                                            generateDiv("success");
+                                            DB -> close();
+                                        } else {
+                                            generateDiv("dbConnectionError");
+                                            DB -> close();
+                                        }
+                                    } else {
+                                        generateDiv("usernameAlreadyExists");
+                                        DB -> close();
+                                    }
+                                }
                             } else {
-                                echo("<div id='passwordsAreNotTheSameError'></div>");
+                                generateDiv("passwordsAreNotTheSameError");
+                                DB -> close();
                             }
                         }
                     }
@@ -52,7 +78,7 @@
             </div>
         </article>
     </main>
-    <script src="./languages/register.js"></script>
+    <script src="./languages/register.js" type="module"></script>
     <script src="./theme.js"></script>
     
 </body>

@@ -48,7 +48,7 @@
         margin-bottom: 21px;
     }
 
-    #dbConnectionError {
+    #dbConnectionError, #passwordsAreNotTheSameError, #usernameAlreadyExists, #success, #userDoesntExist, #incorrectPassword {
         margin-top: 20px;
         font-size: 32px;
     }

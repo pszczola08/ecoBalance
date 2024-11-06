@@ -37,7 +37,7 @@
         margin-bottom: 7px;
     }
 
-    #dbConnectionError {
+    #dbConnectionError, #passwordsAreNotTheSameError, #usernameAlreadyExists, #success, #userDoesntExist, #incorrectPassword {
         margin-top: 10px;
     }
 }

@@ -1,0 +1,39 @@
+Transport:
+- Samochód spalinowy: 8pkt (miesięcznie)
+- Samolot: 10pkt (jednorazowo)
+- Motocykl, skuter spalinowy: 6pkt (miesięcznie)
+- Transport publiczny: 4pkt (miesięcznie)
+
+Energia i gospodarstwo domowe:
+- Ogrzewanie węglem: 9pkt (miesięcznie)
+- Ogrzewanie gazem: 6pkt (miesięcznie)
+- Ogrzewanie naftą lub olejem opałowym: 7pkt (miesięcznie)
+- Ogrzewanie drewnem: 5pkt (miesięcznie)
+- Ogrzewanie energią elektryczną z nieodnawialnych źródeł: 8pkt (miesięcznie)
+- Korzystanie z klimatyzacji: 5pkt (miesięcznie)
+- Elektryczność z nieodnawialnych źródeł: 7pkt (miesięcznie)
+- Elektryczność z odnawialnych źródeł: 2pkt (miesięcznie)
+
+Żywność i dieta:
+- Spożycie mięca czerwonego (wołowina, baranina): 7pkt (miesięcznie)
+- Produkty mleczne: 5pkt (miesięcznie)
+- Żywność przetworzona: 4pkt (miesięcznie)
+- Owoce i warzywa z importu: 3pkt (miesięcznie)
+
+Zakupy:
+- Kupowanie ubrań fast fashion: 6pkt (jednorazowo)
+- Kupowanie urządzeń elektronicznych: 8pkt (jednorazowo)
+- Kupowanie sprzętu AGD: 7pkt (jednorazowo)
+
+Inne
+- Woda butelkowana: 4pkt (miesięcznie)
+- Papierowe rachunki i dokumenty: 3pkt (miesięcznie)
+- Brak segregacji odpadów: 5pkt (miesięcznie)
+
+
+Skala:
+0 - 18: Bardzo mały wpływ (niebieski)
+19 - 36: Mały wpływ (zielony)
+37 - 54: Średni wpływ (żółty)
+55 - 72: Duży wpływ (pomarańczowy)
+73+: Bardzo Duży Wpływ (czerwony)

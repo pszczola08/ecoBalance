@@ -23,8 +23,13 @@ input:focus {
     background-color: #5f5aa2;
 }
 
-#dbConnectionError {
+#dbConnectionError, #passwordsAreNotTheSameError, #usernameAlreadyExists, #userDoesntExist, #incorrectPassword {
     color: red;
+    text-align: center;
+    font-weight: bold;
+}
+#success {
+    color: green;
     text-align: center;
     font-weight: bold;
 }

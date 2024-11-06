@@ -16,20 +16,57 @@
             <div class="info">
                 <h2 id="h2"></h2>
                 <form method="post">
-                    <input type="text" name="username" placeholder="" id="usernameInput" required minlength="8" maxlength="40"><br>
-                    <input type="password" name="password" placeholder="" id="passwordInput" required><br>
-                    <input type="submit" value="" id="submitButton">
+                    <input type="text" name="username" id="usernameInputPlaceholder" required><br>
+                    <input type="password" name="password" id="passwordInputPlaceholder" required><br>
+                    <input type="submit" id="submitButton">
                 </form>
+                <?php
+                    @$username = $_POST['username'];
+                    @$password = $_POST['password'];
+                    if(!empty ($username) && !empty($password)) {
+                        $errors = false;
+                        try {
+                            require "../lib/globalVariables.php";
+                            require "../lib/divGen.php";
+                        } catch(Exception $e) {
+                            $errors = true;
+                            generateDiv('dbConnectionError');
+                        }
+
+                        if($errors == false) {
+                            $getResults = DB -> query(
+                                "SELECT * FROM users WHERE username = '$username'"
+                            );
+                            if($getResults) {
+                                $res = $getResults -> fetch_row();
+                                if($res) {
+                                    if(sha1($password) == $res[2]) {
+                                        session_start();
+                                        $_SESSION['userId'] = $res[0];
+                                        require "../lib/functions.php";
+                                        redirect("../main/panel.php", "_self");
+                                    } else {
+                                        generateDiv("incorrectPassword");
+                                    }
+                                } else {
+                                    generateDiv("userDoesntExist");
+                                }
+                            } else {
+                                generateDiv('dbConnectionError');
+                            }
+                        }
+                    }
+                ?>
             </div>
         </article>
         <aside>
             <div class="info">
                 <h1 id="h1"></h1>
-                <p id="haveAcc"></p>
+                <p id="dontHaveAcc"></p>
             </div>
         </aside>
     </main>
-    <script src="./languages/login.js"></script>
+    <script src="./languages/login.js" type="module"></script>
     <script src="./theme.js"></script>
 </body>
 </html>

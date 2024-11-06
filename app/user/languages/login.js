@@ -1,48 +1,50 @@
+import { setText, setInfoText, getLanguage, setValue } from '../../lib/languageLib.js';
+
 const pl = {
     lang: "pl",
     title: "EcoBalance - Logowanie",
     h1: "Witaj ponownie!",
-    haveAcc: "Nie masz jeszcze konta? <a href='./register.php'>Zarejestruj się</a>!",
+    dontHaveAcc: "Nie masz jeszcze konta? <a href='./register.php'>Zarejestruj się</a>!",
     h2: "Zaloguj się do EcoBalance",
     usernameInputPlaceholder: "Nazwa użytkownika",
     passwordInputPlaceholder: "Hasło",
     submitButton: "Zaloguj się",
-    dbConnectionError: "Połączenie zostało przerwane"
+    dbConnectionError: "Połączenie zostało przerwane",
+    userDoesntExist: "Podany użytkownik nie istnieje",
+    incorrectPassword: "Podane hasło jest nieprawidłowe"
 }
 const en = {
     lang: "en",
     title: "EcoBalance - Log in",
     h1: "Welcome back!",
-    haveAcc: "If you don't have an account yet, <a href='./register.php'>register</a>!",
+    dontHaveAcc: "If you don't have an account yet, <a href='./register.php'>register</a>!",
     h2: "Log in to EcoBalance",
     usernameInputPlaceholder: "Username",
     passwordInputPlaceholder: "Password",
     submitButton: "Log in",
-    dbConnectionError: "Connection failed"
+    dbConnectionError: "Connection failed",
+    userDoesntExist: "Incorrect username",
+    incorrectPassword: "The password is incorrect"
 }
 
-const userLanguage = navigator.language || navigator.userLanguage;
-userLanguage.slice(0, 2);
-if(userLanguage == "pl") {
-    switchLang("pl");
+
+if(getLanguage() == "pl") {
+    var lang = pl;
 } else {
-    switchLang("en");
+    var lang = en;
 }
 
-function switchLang(language) {
-    if(language == "pl") {
-        var lang = pl;
-    } else {
-        var lang = en;
-    }
+document.documentElement.lang = lang.lang;
+document.title = lang.title;
 
-    document.documentElement.lang = lang.lang;
-    document.title = lang.title;
-    document.getElementById('h1').innerText = lang.h1;
-    document.getElementById('haveAcc').innerHTML = lang.haveAcc;
-    document.getElementById('h2').innerText = lang.h2;
-    document.getElementById('usernameInput').setAttribute("placeholder", lang.usernameInputPlaceholder);
-    document.getElementById('passwordInput').setAttribute("placeholder", lang.passwordInputPlaceholder);
-    document.getElementById('submitButton').setAttribute("value", lang.submitButton);
-    document.getElementById('dbConnectionError').innerText = lang.dbConnectionError;
-}
+setText('h1', lang);
+setText('dontHaveAcc', lang);
+setText('h2', lang);
+
+setValue('usernameInputPlaceholder', 'placeholder', lang)
+setValue('passwordInputPlaceholder', 'placeholder', lang)
+setValue('submitButton', 'value', lang)
+
+setInfoText('dbConnectionError', lang);
+setInfoText('userDoesntExist', lang);
+setInfoText('incorrectPassword', lang);

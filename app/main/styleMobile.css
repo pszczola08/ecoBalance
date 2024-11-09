@@ -2,7 +2,6 @@
     header {
         border-radius: 40px;
         height: 20dvh;
-        font-size: 70px;
         margin-bottom: 30px;
     }
     body {
@@ -10,7 +9,6 @@
     }
     nav {
         padding: 30px;
-        font-size: 40px;
         border-radius: 40px;
     }
     nav > a {
@@ -23,17 +21,10 @@
         border-style: dotted;
         border-radius: 20px;
         padding: 10px 30px;
-        font-size: x-large;
     }
     article {
         margin-top: 30px;
         padding: 20px;
-    }
-    form {
-        font-size: 2rem;
-    }
-    input, select {
-        font-size: 2rem;
     }
     input[type="checkbox"] {
         transform: scale(2);
@@ -43,9 +34,8 @@
         margin: 50px auto 0;
         padding: 21px 42px;
         display: block;
-        font-size: xx-large;
     }
-    select, input {
+    select, input, textarea {
         padding: 9px 18px;
         margin-left: 5px;
         border-radius: 10px;
@@ -53,7 +43,25 @@
         background-color: #565192;
         margin-bottom: 10px;
     }
-    p {
-        font-size: xx-large;
+    * {
+        font-size: 1.5rem;
+    }
+    #cantGoBack {
+        text-align: center;
+        margin-bottom: 20px;
+        border: 0px;
+    }
+    label:has(#continue) {
+        display: block;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #submit {
+        margin: auto;
+        display: block;
+    }
+    textarea {
+        width: 50dvw;
+        height: 50dvh;
     }
 }

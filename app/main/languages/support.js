@@ -1,47 +1,41 @@
-import { setText, getLanguage } from '../../lib/languageLib.js';
-import { getMonthAndYear } from "../../lib/dateLib.js";
+import { setText, getLanguage, setValue } from '../../lib/languageLib.js';
 
 const pl = {
     lang: "pl",
-    title: "EcoBalance - Panel Główny",
+    title: "EcoBalance - Zgłoś błąd/sugestię/pytanie",
     mainPanel: "Panel Główny",
     settings: "Ustawienia",
     greeting: "Cześć",
     registerMonth: "Zarejestruj nowy miesiąc",
     statistics: "Statystyki",
     support: "Zgłoś problem, zasugeruj zmianę lub zadaj pytanie",
-    whatsNew: `
-        <h1>Co nowego?</h1>
-        <p style='font-size: large;'>Wersja: 0.0</p>
-        <p>
-
-        </p>
-    `,
-    monthRegisterInfo: `
-        <h1>Obecny miesiąc: ${getMonthAndYear('pl')}</h1>
-    `
+    type: "Typ zgłoszenia: ",
+    choose: "Wybierz typ zgłoszenia",
+    bug: "Błąd",
+    suggestion: "Sugestia",
+    question: "Pytanie",
+    email: "Podaj swój adres e-mail: ",
+    content: "Podaj dokładny opis...",
+    submit: "Prześlij"
 }
 const en = {
     lang: "en",
-    title: "EcoBalance - Main Panel",
+    title: "EcoBalance - Report bug/suggestion/question",
     mainPanel: "Main Panel",
     settings: "Settings",
     greeting: "Hello",
     registerMonth: "Register new month",
     statistics: "Statistics",
     support: "Report a bug, suggest a change or ask a question",
-    whatsNew: `
-        <h1>What's new?</h1>
-        <p style='font-size: large;'>Version: 0.0</p>
-        <p>
-            
-        </p>
-    `,
-    monthRegisterInfo: `
-        <h1>Current month: ${getMonthAndYear('en')}</h1>
-    `
+    type: "Report type: ",
+    choose: "Choose report type",
+    bug: "Bug",
+    suggestion: "Suggestion",
+    question: "Question",
+    email: "Your e-mail address: ",
+    content: "Describe everything...",
+    submit: "Send"
 }
-
 
 if(getLanguage() == "pl") {
     var lang = pl;
@@ -51,6 +45,7 @@ if(getLanguage() == "pl") {
 
 document.documentElement.lang = lang.lang;
 document.title = lang.title;
+setValue("submit", "value", lang);
 
 let counter = 0;
 for(let nameId in pl) {

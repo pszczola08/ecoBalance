@@ -65,6 +65,16 @@
         </nav>
         <article>
             <h1 id="h1"></h1>
+
+            <h2 id="h2_1"></h2>
+            <span id="password"></span>
+            <input type="text" name="password"><br>
+            <span id="delete"></span>
+            <input type="button" onclick="window.open('delete.php', '_self')" id="deleteRequest">
+
+            <h2 id="h2_2"></h2>
+            <span id="version"></span>
+            <a id="versionDetail" href="versionDetail.php" style="margin-left: 10px; color: #565192;"></a>
         </article>
     </main>
     <script src="./theme.js"></script>

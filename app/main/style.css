@@ -29,7 +29,7 @@ form {
 article {
     overflow: auto;
 }
-#dbError, #monthAlreadyExists {
+#dbError, #monthAlreadyExists, #cantGoBack {
     color: red;
     font-weight: bold;
 }

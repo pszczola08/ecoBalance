@@ -1,12 +1,8 @@
-export function setText(id, array) {
-    document.getElementById(id).innerHTML = array[id];
-}
-
 export function setValue(id, value, array) {
     document.getElementById(id).setAttribute(value, array[id]);
 }
 
-export function setInfoText(id, array) {
+export function setText(id, array) {
     try {
         document.getElementById(id).innerHTML = array[id];
     } catch {

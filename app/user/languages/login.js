@@ -1,4 +1,4 @@
-import { setText, setInfoText, getLanguage, setValue } from '../../lib/languageLib.js';
+import { setText, getLanguage, setValue } from '../../lib/languageLib.js';
 
 const pl = {
     lang: "pl",
@@ -45,6 +45,6 @@ setValue('usernameInputPlaceholder', 'placeholder', lang)
 setValue('passwordInputPlaceholder', 'placeholder', lang)
 setValue('submitButton', 'value', lang)
 
-setInfoText('dbConnectionError', lang);
-setInfoText('userDoesntExist', lang);
-setInfoText('incorrectPassword', lang);
+setText('dbConnectionError', lang);
+setText('userDoesntExist', lang);
+setText('incorrectPassword', lang);

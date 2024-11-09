@@ -1,0 +1,47 @@
+header {
+    background-color: #4e7a72;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #a15a50;
+}
+nav > a:hover, nav > a.current {
+    background-color: #b5655a;
+}
+nav > a {
+    text-decoration: none;
+    transition: background-color .5s, color .5s;
+}
+
+div, article {
+    scrollbar-width: none;
+}
+:is(div, article)::-webkit-scrollbar {
+    display: none;
+}
+form {
+    border: 0px;
+}
+article {
+    overflow: auto;
+}
+#dbError, #monthAlreadyExists {
+    color: red;
+    font-weight: bold;
+}
+aside#graphs {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+    width: 100%;
+    height: 25vh;
+    flex-direction: row;
+    align-items: flex-end;
+}
+[id*="_div"] {
+    flex: 1;
+}

@@ -36,6 +36,7 @@
                         try {
                             require "../lib/globalVariables.php";
                             require "../lib/divGen.php";
+                            require "../lib/functions.php";
                         } catch(Exception $e) {
                             $errors = true;
                             generateDiv('dbConnectionError');
@@ -57,8 +58,9 @@
                                             "INSERT INTO users(username, password) VALUES ('$username', '$hashpass')"
                                         );
                                         if($insert) {
-                                            generateDiv("success");
-                                            DB -> close();
+                                            session_start();
+                                            $_SESSION['username'] = $username;
+                                            redirect("./createAcc.php", "_self");
                                         } else {
                                             generateDiv("dbConnectionError");
                                             DB -> close();

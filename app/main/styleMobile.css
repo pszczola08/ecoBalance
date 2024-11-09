@@ -1,3 +1,59 @@
-@media screen and (max-width: 1399px) {
-    
+@media screen and (orientation: portrait) {
+    header {
+        border-radius: 40px;
+        height: 20dvh;
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+    body {
+        margin: 30px;
+    }
+    nav {
+        padding: 30px;
+        font-size: 40px;
+        border-radius: 40px;
+    }
+    nav > a {
+        padding: 20px 40px;
+        border-radius: 30px;
+        display: inline-block;
+    }
+    article > div {
+        border-width: 4px;
+        border-style: dotted;
+        border-radius: 20px;
+        padding: 10px 30px;
+        font-size: x-large;
+    }
+    article {
+        margin-top: 30px;
+        padding: 20px;
+    }
+    form {
+        font-size: 2rem;
+    }
+    input, select {
+        font-size: 2rem;
+    }
+    input[type="checkbox"] {
+        transform: scale(2);
+        margin-left: 20px;
+    }
+    input#submitButton {
+        margin: 50px auto 0;
+        padding: 21px 42px;
+        display: block;
+        font-size: xx-large;
+    }
+    select, input {
+        padding: 9px 18px;
+        margin-left: 5px;
+        border-radius: 10px;
+        border: 3px solid #5f5aa2;
+        background-color: #565192;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: xx-large;
+    }
 }

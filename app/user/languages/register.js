@@ -1,4 +1,4 @@
-import { setText, setInfoText, getLanguage, setValue } from '../../lib/languageLib.js';
+import { setText, getLanguage, setValue } from '../../lib/languageLib.js';
 
 const pl = {
     lang: "pl",
@@ -53,7 +53,7 @@ setValue('secondPasswordInputPlaceholder', 'placeholder', lang);
 setValue('submitButton', 'value', lang);
 document.getElementById('usernameInput').setAttribute('title', lang.usernameInputTitle)
 
-setInfoText('dbConnectionError', lang);
-setInfoText('passwordsAreNotTheSameError', lang);
-setInfoText('usernameAlreadyExists', lang);
-setInfoText('success', lang);
+setText('dbConnectionError', lang);
+setText('passwordsAreNotTheSameError', lang);
+setText('usernameAlreadyExists', lang);
+setText('success', lang);

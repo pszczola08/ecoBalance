@@ -1,4 +1,4 @@
-@media screen and (max-width: 1399px) {
+@media screen and (orientation: portrait) {
     aside {
         height: 20dvh;
     }

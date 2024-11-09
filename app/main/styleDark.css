@@ -16,3 +16,14 @@ form {
 ::placeholder {
     color: #F4FFF880;
 }
+
+nav > a {
+    color: #F4FFF8;
+}
+nav > a:hover {
+    color: #F4FFF880;
+}
+
+article > div {
+    border-color: #F4FFF8;
+}

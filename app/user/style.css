@@ -16,7 +16,7 @@ a {
 }
 
 input {
-    transition: background-color .3s;
+    transition: .3s;
 }
 input:focus {
     border-color: #565192;

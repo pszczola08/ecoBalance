@@ -1,47 +1,29 @@
-import { setText, getLanguage } from '../../lib/languageLib.js';
-import { getMonthAndYear } from "../../lib/dateLib.js";
+import { setText, getLanguage, setValue } from '../../lib/languageLib.js';
 
 const pl = {
     lang: "pl",
-    title: "EcoBalance - Panel Główny",
+    title: "EcoBalance - Zarejestruj Nowy Miesiąc",
+    submitButton: "Zarejestruj",
     mainPanel: "Panel Główny",
     settings: "Ustawienia",
     greeting: "Cześć",
     registerMonth: "Zarejestruj nowy miesiąc",
     statistics: "Statystyki",
     support: "Zgłoś problem lub zasugeruj zmianę",
-    whatsNew: `
-        <h1>Co nowego?</h1>
-        <p style='font-size: large;'>Wersja: 0.0</p>
-        <p>
-
-        </p>
-    `,
-    monthRegisterInfo: `
-        <h1>Obecny miesiąc: ${getMonthAndYear('pl')}</h1>
-    `
+    article: "Wykres twojego śladu węglowego"
 }
 const en = {
     lang: "en",
-    title: "EcoBalance - Main Panel",
+    title: "EcoBalance - Register New Month",
+    submitButton: "Register",
     mainPanel: "Main Panel",
     settings: "Settings",
     greeting: "Hello",
     registerMonth: "Register new month",
     statistics: "Statistics",
     support: "Report a bug or suggest a change",
-    whatsNew: `
-        <h1>What's new?</h1>
-        <p style='font-size: large;'>Version: 0.0</p>
-        <p>
-            
-        </p>
-    `,
-    monthRegisterInfo: `
-        <h1>Current month: ${getMonthAndYear('en')}</h1>
-    `
+    article: "Chart of your carbon footprint"
 }
-
 
 if(getLanguage() == "pl") {
     var lang = pl;
@@ -54,7 +36,7 @@ document.title = lang.title;
 
 let counter = 0;
 for(let nameId in pl) {
-    if(counter > 1) {
+    if(counter > 2) {
         setText(String(nameId), lang)
     }
     counter++;

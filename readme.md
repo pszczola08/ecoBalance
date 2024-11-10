@@ -12,6 +12,7 @@ Marceli Szerszeń:
 
 Wiktor Woś:
 - Coding and designing website
+- 3D designer
 
 Jerzy Korczin:
 
@@ -37,6 +38,7 @@ Marceli Szerszeń:
 
 Wiktor Woś:
 - Pisanie i projektowanie strony internetowej
+- Projektowanie 3D
 
 Jerzy Korczin:
 

@@ -11,6 +11,7 @@ Marceli Szerszeń:
 - Coding app
 
 Wiktor Woś:
+- Coding and designing website
 
 Jerzy Korczin:
 
@@ -31,6 +32,7 @@ Marceli Szerszeń:
 - Pisanie Aplikacji
 
 Wiktor Woś:
+- Pisanie i projektowanie strony internetowej
 
 Jerzy Korczin:
 

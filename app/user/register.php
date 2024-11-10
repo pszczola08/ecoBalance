@@ -16,6 +16,7 @@
             <div class="info">
                 <h1 id="h1"></h1>
                 <p id="haveAcc"></p>
+                <model-viewer src="../assets/kominek.glb" auto-rotate camera-controls ar style="width: 100%; height: 40vh;"></model-viewer>
             </div>
         </aside>
         <article>
@@ -82,6 +83,6 @@
     </main>
     <script src="./languages/register.js" type="module"></script>
     <script src="./theme.js"></script>
-    
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </body>
 </html>

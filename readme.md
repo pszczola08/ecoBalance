@@ -19,6 +19,10 @@ Jerzy Korczin:
 - English
 - Polish
 
+## To do this project, we used google libraries:
+- Google fonts
+- Google model-viewer
+
 # EcoBalance - kalkulator śladu węglowego
 Aplikacja ma na celu śledzić produkcję śladu węglowego i pomagać w jego redukcji.
 
@@ -39,3 +43,7 @@ Jerzy Korczin:
 ## Aplikacja jest dostępna w dwóch językach
 - Angielski
 - Polski
+
+## Do stworzenia aplikacji użyliśmy bibliotek:
+- Google fonts
+- Google model-viewer

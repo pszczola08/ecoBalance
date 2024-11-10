@@ -47,9 +47,6 @@
     <header id="header">
         
     </header>
-    <main id="main">
-        
-    </main>
     <script>
         const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -63,14 +60,12 @@
         const pl = {
             lang: "pl",
             title: "EcoBalance - Błąd 404",
-            header: "Coś poszło nie tak.",
-            main: "<a href='panel.php' style='display: block; text-align: center;'>Powrót do strony głównej</a>"
+            header: "Podana strona nie istnieje."
         }
         const en = {
             lang: "en",
             title: "EcoBalance - Error 404",
-            header: "Something went wrong.",
-            main: "<a href='panel.php' style='display: block; text-align: center;'>Back to the main page</a>"
+            header: "This page doesn't exist."
         }
 
         const userLanguage = navigator.language || navigator.userLanguage;
@@ -84,7 +79,6 @@
         document.documentElement.lang = lang.lang;
         document.title = lang.title;
         document.getElementById('header').innerHTML = lang['header'];
-        document.getElementById('main').innerHTML = lang['main'];
     </script>
 </body>
 </html>

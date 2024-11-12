@@ -47,6 +47,9 @@
     <header id="header">
         
     </header>
+    <main>
+        <a href="/projects/ecobalance/app/main/panel.php" id="a"></a>
+    </main>
     <script>
         const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -60,12 +63,14 @@
         const pl = {
             lang: "pl",
             title: "EcoBalance - Błąd 404",
-            header: "Podana strona nie istnieje."
+            header: "Podana strona nie istnieje.",
+            a: "Powrót na stronę główną"
         }
         const en = {
             lang: "en",
             title: "EcoBalance - Error 404",
-            header: "This page doesn't exist."
+            header: "This page doesn't exist.",
+            a: "Back to main page"
         }
 
         const userLanguage = navigator.language || navigator.userLanguage;
@@ -79,6 +84,7 @@
         document.documentElement.lang = lang.lang;
         document.title = lang.title;
         document.getElementById('header').innerHTML = lang['header'];
+        document.getElementById('a').innerHTML = lang['a'];
     </script>
 </body>
 </html>

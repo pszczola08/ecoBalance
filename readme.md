@@ -41,6 +41,7 @@ Wiktor Woś:
 - Projektowanie 3D
 
 Jerzy Korczin:
+- Projekt ikony
 
 ## Aplikacja jest dostępna w dwóch językach
 - Angielski

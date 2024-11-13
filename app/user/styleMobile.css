@@ -52,4 +52,15 @@
         margin-top: 20px;
         font-size: 32px;
     }
+
+    aside > div.info {
+        display: flex;
+    }
+    aside > div.info > div.sub {
+        flex: 2;
+    }
+    aside > div.info > model-viewer {
+        flex: 1;
+        height: 10vh;
+    }
 }

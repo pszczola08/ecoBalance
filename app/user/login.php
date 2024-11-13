@@ -60,10 +60,12 @@
             </div>
         </article>
         <aside>
-            <div class="info">
-                <h1 id="h1"></h1>
-                <p id="dontHaveAcc"></p>
-                <model-viewer src="../assets/kominek.glb" auto-rotate camera-controls ar style="width: 100%; height: 40vh;"></model-viewer>
+        <div class="info">
+                <div class="sub">
+                    <h1 id="h1"></h1>
+                    <p id="dontHaveAcc"></p>
+                </div>
+                <model-viewer src="../assets/kominek.glb" auto-rotate ar></model-viewer>
             </div>
         </aside>
     </main>
